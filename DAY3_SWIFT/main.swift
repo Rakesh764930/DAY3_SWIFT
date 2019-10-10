@@ -12,3 +12,5 @@ print("Hello, World!")
 
 var str="Hello"
 print(str)
+var x=5
+print(x)
