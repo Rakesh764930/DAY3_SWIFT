@@ -8,5 +8,28 @@
 
 import Foundation
 
-print("Hello, World!")
-
+class faculty {
+    var facultyID: Int!
+    var firstName: String?
+    var basicSalary: Int?
+    var bonus: Int? = nil
+    var finSalary: Int?
+    func calcSalary() {
+        finSalary = basicSalary! + (bonus ?? 0)
+    }
+    deinit {
+        print("Faculty deinit called")
+    }
+    func printData() {
+        print(finSalary!)
+    }
+    convenience init(facultyID: Int, facultyName: String){
+        self.init(basicSalary: 0, bonus1: 0)
+        self.facultyID = facultyID
+        self.firstName = facultyName
+    }
+    init(basicSalary: Int, bonus1: Int) {
+        self.basicSalary = basicSalary
+        self.bonus = bonus1
+    }
+}
